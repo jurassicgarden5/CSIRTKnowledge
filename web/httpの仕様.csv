@@ -1,2 +1,5 @@
-sa, sasa
-fasfsafas, safsafsa
+ステータスコード, 内容
+1xx, 処理が継続
+2xx, 正常終了
+3xx, リダイレクト
+4xx, クライアントエラー
