@@ -33,6 +33,14 @@ javascriptなどクライアントスクリプトからサイトをまたがっ�
 
 ### CORS
 情報提供元がAccess-Control-Allow-Origin：<情報依頼元のURL> のレスポンスヘッダを送信した場合にXMLHttpRequestが可能
-
+* シンプルなリクエスト
+  * ヘッダ、Content-Typeヘッダが限られた条件のもの
+* プリフライトリクエスト
+  * シンプルなリクエストでない場合にブラウザが判断
+  * 情報提供元がAccess-Control-Aloow-Methods, Headers, Originを返してくれた場合はリクエスト可能 
+* 認証情報を含むリクエスト
+  * デフォルトではクロスオリジンへの認証は送信されない。以下の場合に可能 
+    * 情報依頼元がwithCredentialなXMLHttpRequestを送信
+    * 情報提供元がAccess-Control-Allow-Credentials: trueを返す
 
 
